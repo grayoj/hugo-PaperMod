@@ -25,16 +25,20 @@
   {{- if .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
+
   </div>
   {{- end }}
+
 </header>
+
 {{- end }}
 
 {{- if .Content }}
-<div class="post-content">
-  {{- if not (.Param "disableAnchoredHeadings") }}
-  {{- partial "anchored_headings.html" .Content -}}
-  {{- else }}{{ .Content }}{{ end }}
+
+{{- if not (.Param "disableAnchoredHeadings") }}
+{{- partial "anchored_headings.html" .Content -}}
+{{- else }}{{ .Content }}{{ end }}
+
 </div>
 {{- end }}
 
@@ -42,7 +46,7 @@
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
@@ -67,16 +71,16 @@
   {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
   {{- partial "cover.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
   <header class="entry-header">
-    <h2>
+    <h5>
       {{- .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-    </h2>
+    </h5>
   </header>
-  {{- if (ne (.Param "hideSummary") true) }}
+  <!-- {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
-  {{- end }}
+  {{- end }} -->
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
     {{- partial "post_meta.html" . -}}
