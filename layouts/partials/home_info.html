@@ -1,40 +1,52 @@
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
-    <header class="entry-header">
-        <h3>{{ .Title | markdownify }}</h3>
-    </header>
-    <div class="entry-content">
-        <p style="margin-top: 5; margin-bottom: 5;"
-            className='prose prose-neutral text-neutral-600 dark:text-neutral-300 dark:prose-invert'>
-            I’m Gerald Maduabuchi Ogbonnaya Okereke, a passionate computer programmer and
-            consultant with a penchant for orchestrating the digital world. I am
-            heavily invested in working on cool projects within the scope of
-            distributed systems, machine learning and software engineering in general. I enjoy teaching and working on a
-            lot of hobby projects. My journey has led me to collaborate with
-            esteemed organizations such as <u><a href="https://phillipsconsulting.net">Phillips Consulting</a></u> and
-            <u><a href="https://www.legend.ng/">Legend Nigeria</a></u>
-            to name a few, to execute several projects. I've also taught the
-            engineering teams of huge government parastatals such as
-            <u><a href="https://www.pencom.gov.ng/">Nigerian Pension Commission</a></u> and the
-            <u><a href="https://www.nysc.gov.ng/">National Youth Service Corps</a></u>, helping them migrate or scale
-            their infrastructure.
-        </p>
-        <p style="margin-top: 10px; margin-bottom: 10px;"
-            className='prose prose-neutral text-neutral-600 dark:text-neutral-300 dark:prose-invert'>
-            Here, I write articles
-            on software development, computer science, distributed systems things I
-            am learning and experiencing. I also share what software projects I am on. Feel free to reach me by email or
-            via Linkedin. To see some of my latest writing check out: *<u><a
-                    href="/posts/engineering-nicfosts-eservices-module">Engineering Nicfost's eservices
-                    module</a></u> and *<u><a href="/posts/shortest-path-problem/">Dijkstra's Algorithm: Solving the
-                    shortest path problem</a></u>.
-        </p>
-    </div>
+  <header class="entry-header">
+    <h3>{{ .Title | markdownify }}</h3>
+  </header>
+  <div class="entry-content">
+    <p
+      style="margin-top: 5; margin-bottom: 5"
+      className="prose prose-neutral text-neutral-600 dark:text-neutral-300 dark:prose-invert"
+    >
+      I’m Gerald Maduabuchi Ogbonnaya Okereke, a passionate computer programmer
+      and consultant with a penchant for orchestrating the digital world. I am
+      heavily invested in working on cool projects within the scope of
+      distributed systems, machine learning and software engineering in general.
+      I enjoy teaching and working on a lot of hobby projects. My journey has
+      led me to collaborate with esteemed organizations such as
+      <u><a href="https://phillipsconsulting.net">Phillips Consulting</a></u>
+      to execute several projects. I've also taught the engineering teams of
+      huge government parastatals such as
+      <u
+        ><a href="https://www.pencom.gov.ng/">Nigerian Pension Commission</a></u
+      >
+      and the
+      <u><a href="https://www.nysc.gov.ng/">National Youth Service Corps</a></u
+      >, helping them migrate or scale their infrastructure.
+    </p>
+    <p
+      style="margin-top: 10px; margin-bottom: 10px"
+      className="prose prose-neutral text-neutral-600 dark:text-neutral-300 dark:prose-invert"
+    >
+      Here, I write articles on software development, computer science,
+      distributed systems things I am learning and experiencing. I also share
+      what software projects I am on. Feel free to reach me by email or via
+      Linkedin. To see some of my latest writing check out: *<u
+        ><a href="/posts/engineering-nicfosts-eservices-module"
+          >Engineering Nicfost's eservices module</a
+        ></u
+      >
+      and *<u
+        ><a href="/posts/shortest-path-problem/"
+          >Dijkstra's Algorithm: Solving the shortest path problem</a
+        ></u
+      >.
+    </p>
+  </div>
 
-    <footer class="entry-footer">
-        {{ partial "social_icons.html" site.Params.socialIcons }}
-    </footer>
-    <h3 style="margin-top: 100x;">Latest Articles</h3>
-
+  <footer class="entry-footer">
+    {{ partial "social_icons.html" site.Params.socialIcons }}
+  </footer>
+  <h3 style="margin-top: 100x">Latest Articles</h3>
 </article>
 {{- end -}}
